@@ -7,11 +7,10 @@ This is only applicable for Steam Deck running on Windows 10 / Windows 11.
 ## Pre-requisites - What is needed for this to run correctly?
 Skip SWICD and Playnite if you have them installed already!
 1. mpv - [click here for more details](https://mpv.io/). Download the Windows binary [here](https://sourceforge.net/projects/mpv-player-windows/files/)
-2. SWICD - [click here for more details](https://github.com/mKenfenheuer/steam-deck-windows-usermode-driver) And mostly the dependencies needed by SWICD - [MS Visual C++ Redistributable Package](https://aka.ms/vs/17/release/vc_redist.x64.exe), [VIGEM](https://github.com/ViGEm/ViGEmBus), [HIDHIDE](https://github.com/ViGEm/HidHide), and [Tetherscript](https://tetherscript.com/hid-driver-kit-download/).
-3. Playnite - [click here for more details](https://playnite.link)
+
 
 ## Optional Items -
-1. ExplorerPatcher - [click here for more details](https://github.com/valinet/ExplorerPatcher). You will need this if you want the Taskbar to autohide so that it will be a seamless transition when playing the video and launching Playnite.
+1. ExplorerPatcher - [click here for more details](https://github.com/valinet/ExplorerPatcher). You will need this if you want the Taskbar to autohide so that it will be a seamless transition when playing the video.
 2. Bat To Exe Converter - [click here for more details](https://www.f2ko.de/programme/bat-to-exe-converter/). Download [here](https://www.majorgeeks.com/files/details/bat_to_exe_converter.html). You will need this if you want to modify the batch file to your liking.
 3. Windows 10 / Windows 11 Enterprise or Education - You will need this if you want to take advantage of Custom Login which supresses the "Welcome" message at startup.
 
