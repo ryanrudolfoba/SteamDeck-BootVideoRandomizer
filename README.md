@@ -73,8 +73,8 @@ https://user-images.githubusercontent.com/98122529/226190803-8873e038-2c2c-41e3-
 ![image](https://user-images.githubusercontent.com/98122529/226188657-63c5202c-399d-4db8-843d-a94b74562cd3.png)
 
 5. Open PowerShell and "compile" RandomVideo.ps1 -\
-   a. cd \mpv
-   b. ps2exe .\RandomVideo.ps1 -noConsole
+   a. cd \mpv \
+   b. ps2exe .\RandomVideo.ps1 -noConsole \
 ![image](https://user-images.githubusercontent.com/98122529/226188765-9f9fc12c-59ee-4bbe-9759-aa47a181a661.png)
 
 6. Close the PowerShell window. Go to C:\mpv and there should be a file called RandomVideo.exe.\
