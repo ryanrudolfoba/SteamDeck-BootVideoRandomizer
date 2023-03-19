@@ -7,6 +7,9 @@ This will play a random video during bootup similar to SteamOS.
 1. Do this at your own risk!
 2. This is for educational and research purposes only!
 
+## Sample Video
+https://user-images.githubusercontent.com/98122529/226190803-8873e038-2c2c-41e3-93d4-81cb18e6f315.mp4
+
 ## What's New (as of March 19 2023)
 1. initial release
 
