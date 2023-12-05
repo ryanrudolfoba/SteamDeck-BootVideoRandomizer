@@ -45,27 +45,57 @@ https://user-images.githubusercontent.com/98122529/226190803-8873e038-2c2c-41e3-
 ![image](https://user-images.githubusercontent.com/98122529/226112214-7809f4d7-fadb-40cc-a355-b5e285165097.png)
 
 4. Configure the unbranded boot. Open elevated command prompt- NOT POWERSHELL, COMMAND PROMPT! / run as admin and type the items -\
-   a. ```reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Embedded\EmbeddedLogon" /f /v HideAutoLogonUI /t REG_DWORD /d 1 \```
-   b. ```reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Embedded\EmbeddedLogon" /f /v HideFirstLogonAnimation /t REG_DWORD /d 1 \```
-   c. ```reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Embedded\EmbeddedLogon" /f /v BrandingNeutral /t REG_DWORD /d 1 \```
-   d. ```bcdedit -set {globalsettings} bootuxdisabled on \```
+   a.
+   ```
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Embedded\EmbeddedLogon" /f /v HideAutoLogonUI /t REG_DWORD /d 1
+    ```
+   b.
+     ```
+    reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Embedded\EmbeddedLogon" /f /v HideFirstLogonAnimation /t REG_DWORD /d 1
+     ```
+   c.
+   ```
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Embedded\EmbeddedLogon" /f /v BrandingNeutral /t REG_DWORD /d 1
+   ```
+   d.
+   ```
+   bcdedit -set {globalsettings} bootuxdisabled on
+    ```
 ![image](https://user-images.githubusercontent.com/98122529/226112763-8a079244-a110-4502-862f-fdc5c787b80b.png)
 
    
-5. Configure autologin. **Replace localname and localpassword accordingly. eg LocalName is your windows username eg (C:\users/admin) and LocalPassword is your windows password, This is very important, if you make a mistake here Windows might not boot!** \
+6. Configure autologin. **Replace localname and localpassword accordingly. eg LocalName is your windows logon username and LocalPassword is your windows logon password, This is very important, if you make a mistake here Windows might not boot!** \
    a. Open elevated command prompt / run as admin.\
-   a. ```reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /f /v AutoAdminLogon /t REG_SZ /d 1 \```
-   b. ```reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /f /v DefaultUserName /t REG_SZ /d localname \```
-   c. ```reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /f /v DefaultPassword /t REG_SZ /d localpassword \```
+   a.
+   ```
+   reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /f /v AutoAdminLogon /t REG_SZ /d 1
+   
+    ```
+   b.
+    ```
+    reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /f /v DefaultUserName /t REG_SZ /d localname
+     ```
+    
+   c.
+    ```
+    reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /f /v DefaultPassword /t REG_SZ /d localpassword
+   ```
 ![image](https://user-images.githubusercontent.com/98122529/226112692-6be851dc-78dd-4400-89b2-18d5267073f4.png)
 
 7. Reboot and Windows should automatically log you in!
 8. Install the PowerShell module p2exe -\
    a. Run PowerShell as administrator.\
 ![image](https://user-images.githubusercontent.com/98122529/226184315-5ddefda1-b93b-4deb-ac0a-3d49f0c8833d.png)\
-   b. ```Install-Module -Name ps2exe``` Press Y on the additional prompts.\
+   b.
+    ```
+   Install-Module -Name ps2exe
+    ```
+     Press Y on the additional prompts.
 ![image](https://user-images.githubusercontent.com/98122529/226187699-71bbba2b-740e-4967-92cc-56351de5c648.png)\
-   c. ```Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine``` \
+   c.
+   ```
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
+   ``` 
 ![image](https://user-images.githubusercontent.com/98122529/226187992-6bcc4459-b445-461a-9ad3-e882336de71b.png)
    
 
@@ -90,27 +120,43 @@ https://user-images.githubusercontent.com/98122529/226190803-8873e038-2c2c-41e3-
 ![image](https://user-images.githubusercontent.com/98122529/226188657-63c5202c-399d-4db8-843d-a94b74562cd3.png)
 
 5. Open PowerShell and "compile" RandomVideo.ps1 -\
-   a. ```cd \mpv``` \
-   b. ```ps2exe .\RandomVideo.ps1 -noConsole``` \
-   if Step B  fails, try typing ```Win-PS2EXE``` and on the Source File text box either type the path to the RandomVideo.ps1 OR click the 3 dots \[...] menu to the right of the text box and navigating to the RandomVideo.ps1 file,  then hit compile.
+   a.
+   ```
+   cd \mpv
+   ``` 
+   b.
+   ```
+   ps2exe .\RandomVideo.ps1 -noConsole
+   ``` 
+   
 ![image](https://user-images.githubusercontent.com/98122529/226188765-9f9fc12c-59ee-4bbe-9759-aa47a181a661.png)
-Command prompt screen
-![image](https://i.imgur.com/HU3Xb63.png)
-Win-PS2EXE GUI Screen, the button you press
-![image](https://i.imgur.com/LwRk3Ah.png)
-this is the screen you see after clicking the 3 dots menu \[...] 
 
-6. Close the PowerShell window. Go to C:\mpv and there should be a file called RandomVideo.exe.\
+Command prompt screen
+
+## if Step B fails
+
+try typing ```Win-PS2EXE``` and on the Source File text box either type the path to the RandomVideo.ps1 OR click the 3 dots \[...] menu to the right of the text box and navigating to the RandomVideo.ps1 file,  then hit compile.
+
+![image](https://i.imgur.com/cGr9SFW.png)
+
+
+![image](https://i.imgur.com/HU3Xb63.png)
+
+Win-PS2EXE GUI Screen, presenting the button you press (3 dots menu\[...])
+
+
+
+7. Close the PowerShell window. Go to C:\mpv and there should be a file called RandomVideo.exe.\
 ![image](https://user-images.githubusercontent.com/98122529/226188912-a9cd6066-0b7d-4cfb-8a8a-b1c075d0f3eb.png)
 
-7. Test that it is working - launch RandomVideo.exe and it should play a random boot video!
+8. Test that it is working - launch RandomVideo.exe and it should play a random boot video!
 
-8. If everything looks good, final step is to set it as the shell. **This is very important. If you make a mistake here Windows might not boot!** \
+9. If everything looks good, final step is to set it as the shell. **This is very important. If you make a mistake here Windows might not boot!** \
    a. Open elevated command prompt / run as admin.\
    b. reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /f /v Shell /t REG_SZ /d "C:\mpv\RandomVideo.exe" \
 ![image](https://user-images.githubusercontent.com/98122529/226189460-b5a09829-f009-44d8-b61f-a8cd00adc6dd.png)
 
-9. Reboot and enjoy the random boot video!
+10. Reboot and enjoy the random boot video!
 
 
 ## Optional - Autohide the taskbar
