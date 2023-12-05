@@ -1,6 +1,6 @@
-# Boot Video Randomizer for Steam Deck Running on Windows 10 / Windows 11
+# Boot Video Randomizer for Steam Deck Or Any PC Running on Windows 10 / Windows 11
 
-This is only applicable for Steam Deck running on Windows 10 / Windows 11. \
+This is only applicable for Steam Deck/Machines running on Windows 10 / Windows 11. \
 This will play a random video during bootup similar to SteamOS.
 
 > **NOTE**\
