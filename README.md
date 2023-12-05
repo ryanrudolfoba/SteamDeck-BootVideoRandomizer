@@ -21,7 +21,7 @@ This will play a random video during bootup similar to SteamOS.
 ## Sample Video
 https://user-images.githubusercontent.com/98122529/226190803-8873e038-2c2c-41e3-93d4-81cb18e6f315.mp4
 
-## What's New (as of March 26 2023)
+## What's New (As of March 26 2023)
 1. videos with spaces in the filenames are now parsed correctly
 2. not limited to webm files
 
